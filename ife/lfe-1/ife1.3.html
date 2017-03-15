@@ -5,6 +5,7 @@
 	<title>ife1.3</title>
 </head>
 <style type="text/css">
+/***左侧float left 右侧float right 中间 float none 盒子顺序 left right center****/
 	*{
 		margin: 0;
 		padding: 0;
@@ -16,6 +17,7 @@
 		margin: 20px;
 		overflow:hidden;
 		padding: 20px;
+		overflow:auto;
 	}
 	.logo{
     width: 80px;
@@ -40,16 +42,17 @@
 		background: white;
 		float: right;
 		border: 1px solid grey;
+		overflow:auto;
 	}
 	#person ul li{
 		list-style-type: none;
 	}
 	#news{
-		float: left;
 		border: 1px solid grey;
 		background: white; 
-		margin-left: 20px;
-		
+    margin-left:220px;
+    margin-right:140px;
+		word-wrap:break-word;
 	}
 </style>
 <body>
@@ -57,11 +60,6 @@
   	<div id="team">
   		<div class="logo"></div>
   	</div>
-  	<div id="news">
-  	  <p>sdfdsfsdfdsssssssssssssssssssss</p>
-  	  <p>dsfsdfsf</p>
-  	  <p>fdsfsdfsdfsdf</p>
-  	 </div>
   	<div id="person">
   		<ul>
   			<li class="logo1"></li>
@@ -70,6 +68,12 @@
   			<li class="logo1"></li>
   		</ul>
   	</div>
+  	<div id="news">
+  	  <p>sdfdsfsdfdsssssssssssssssssssss</p>
+  	  <p>dsfsdfsf</p>
+  	  <p>fdsfsdfsdfsdf</p>
+  	 </div>
+
   </div>
 </body>
 </html>
