@@ -3,9 +3,159 @@
   <head>
   <meta charset="UTF-8">
   <title>ife1.2</title>
-  <script type="text/javascript">
+  <script type="text/javascript" >
   </script>
+  <style type="text/css">
+    *{
+      margin: 0;
+      padding: 0;
+
+    }
+    #main{
+      width: 80%;
+      margin: 0 auto;
+      height: 3000px;
+      background: #DEDEDE;
+    }
+    #top{
+      width: 100%;
+      height: 2%;
+      background-color: #333333;
+      float: left;
+    }
+    #top ul li{
+      float: right;
+      width: 5%;
+      color: white;
+      margin-top: 1%;
+    }
+    .news{
+      width: 86%;
+      background: white;
+      float: left;
+      margin:2% 5%;
+      box-shadow: 2px 2px 2px #909090;
+      padding: 2%;
+      list-style-type: none;
+    }
+    .news ul li{
+      list-style-type: none;
+      border: 1px solid #DEDEDE;
+      padding: 1%;
+      width: 5%;
+    }
+    .news table{
+      border-collapse: collapse;
+      border:1px solid grey;
+      width: 80%;
+      height: 50%;
+    }
+    th{
+      background: black;
+      color: white;
+    }
+    #news1{
+      width: 95%;
+      height: 10%;
+      border-left: 3px solid grey;
+    }
+    #news1 p{
+      padding-left: 2%;
+      line-height: 100%;
+    }
+    #news2{
+      width: 90%;
+      margin:0 auto;
+      padding-top: 2%;
+    }
+    #news2 p{
+      text-align: center;
+      padding-top: 2%;
+    }
+    #submit{
+      padding: 1%;
+      height: 50%;
+      width: 100%;
+      background: blue;
+      color: white;
+    }
+  </style>
   </head>
   <body>
+  <div id="main">
+    <div id="top">
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+      </ul>
+    </div>
+    <div class="news">
+      <h1>title</h1>
+      <h2>tltle 2</h2>
+      <h3>time author</h3>
+      <p>sdfsdgfdhgfjhgjkjhlk</p>
+      <p>dsfsdfsdfdsfsd<a href="#">fdfsdgfdhgfhgf</a></p>
+      <img src="ife/pic/360反馈意见截图16581118699399.png" height=25%>
+      <p>sdfdgfhgfhfghgfhg</p>
+    </div>
+    <div class="news">
+      <h1>tltle</h1>
+      <ul>
+        <li style="margin: 2%">dfdfds<img src="ife/pic/360反馈意见截图16581118699399.png" height=50px ></li>
+        <li style="margin: 2%">fdfdf<img src="ife/pic/360反馈意见截图16581118699399.png" height=50px></li>
+        <li style="margin: 2%">fdfdf<img src="ife/pic/360反馈意见截图16581118699399.png" height=50px></li>
+      </ul>
+    </div>
+    <div class="news">
+      <h1>last</h1>
+      <ul>
+        <li>1.1</li>
+        <li>1.2</li>
+        <li>1.3</li>
+      </ul>
+      <table border="1">
+        <tr>
+          <th>111</th>
+          <th>1111</th>
+          <th><a href="#">1111</a></th>
+        </tr>
+        <tr>
+          <td>2222</td>
+          <td>2222</td>
+          <td>1111</td>
+        </tr>
+        <tr>
+          <td>2222</td>
+          <td>2222</td>
+          <td>1111</td>
+        </tr>
+        <tr>
+          <td>2222</td>
+          <td colspan="2">2222</td>
+        </tr>
+      </table>
+    </div>
+    <div class="news">
+      <div id="news1"><p>this is a dfdsfsdf</p></div>
+      <div id="news2">
+        <p>please<input type="text" name="" value="this"></p>
+        <p>dfsdfsdfsdf</p>
+        <p>password<input type="text" name="" value="this"></p>
+        <p>password<input type="text" name="" value="this"></p>
+        <p>sex<input type="radio" name="" value="male" checked>male<input type="radio" name="" value="female">female</p>
+        <p>city
+          <select>
+            <option>1</option>
+            <option>2</option>
+          </select>
+        </p>
+        <p>fav<input type="checkbox" name="" value="1">1<input type="checkbox" name="" value="1">1<input type="checkbox" name="" value="1">1</p>
+        <p>you<input type="text" name="" value="33333333"></p>
+        <p><input type="button" id="submit" value="sas"></p>
+      </div>
+    </div>
+  </div>
   </body>
 </html>
