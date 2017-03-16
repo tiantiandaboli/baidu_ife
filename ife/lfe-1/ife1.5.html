@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ife1.5</title>
+</head>
+<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+		font-family: "微软雅黑";
+	}
+	.top{
+		background: #333333;
+		height: 10%;
+		width: 98%;
+		color: white;
+		overflow: auto;
+		padding:1%;
+	}
+	.top ul li{
+		float: right;
+		width: 5%;
+		font-size: 14px;
+	}
+	#mian{
+		background: #DEDEDE;
+		width: 100%;
+		overflow: hidden;
+	}
+	#right{
+		width: 280px;
+		float: right;
+		background: white;
+		margin: 20px;
+		box-shadow: 10px 10px 5px #888888;
+	}
+	#left{
+		margin: 20px 360px 20px 20px;
+	}
+	.news{
+		padding: 20px;
+		background: white;
+		margin-bottom: 20px;
+		box-shadow: 10px 10px 5px #888888;
+	}
+	.news ul li{list-style-type: none;}
+	.news p{
+		margin: 5px;
+	}
+	.news h2,h3 {
+		color: grey;
+	}
+	#table1 {
+      	border-collapse: separate;
+		border-spacing: 10px;
+		font-size: 14px;
+	}
+	.tab_r{
+		text-align: left;
+		color: grey;
+		font-size: 10px;
+	}
+	.tab_t{
+		text-align: right;
+	}
+	#self{
+		height: 50px;
+	}
+	#table2 tr td{
+		width: 5%;
+		height: 20px;
+		border: 1px solid grey;
+ 		padding: 1%;
+	}
+	.pic{
+		border: 1px solid grey;
+		width: 200px;
+		padding: 5px;
+		float: left;
+		margin: 2px;
+	}
+</style>
+<body>
+  <div>
+  	<div class="top">
+  		<ul>
+  			<li>导航4</li>
+  			<li>导航3</li>
+  			<li>导航2</li>
+  			<li>导航1</li>
+  		</ul>
+  	</div>
+  	<div id="mian">
+  		<div id="right" class="news">
+  			<div><span style="background: grey;height: 30px;width: 3px;display: block;float: left;margin-right: 2%;"></span>this is a  title</div>
+  			<table id="table1">
+  				<tr>
+  					<td>输入邮箱:</td>
+  					<td><input type="text" name="" value="this is"></td>
+  				</tr>
+  				<tr><td></td><td class="tab_r">格式</td></tr>
+  				<tr>
+  					<td>输入密码:</td>
+  					<td><input type="password" name="" value="this is"></td>
+  				</tr>
+  				<tr>
+  					<td>再次输入:</td>
+  					<td><input type="password" name="" value="this is"></td>
+  				</tr>
+  				<tr>
+  					<td></td>
+  					<td class="tab_r">密码16位</td>
+  				</tr>
+  				<tr>
+  					<td class="tab_t">性别:</td>
+  					<td><input type="radio" name="" checked>男<input type="radio" name="">女</td>
+  				</tr>
+  				<tr>
+  					<td class="tab_t">城市:</td>
+  					<td>
+  						<select>
+  							<option value="2">北京</option>
+  							<option value="3">上海</option>
+  							<option value="4">成都</option>
+  						</select>
+  					</td>
+  				</tr>
+  				<tr>
+  					<td class="tab_t">爱好:</td>
+  					<td><input type="checkbox" name="">运动<input type="checkbox" name="">艺术<input type="checkbox" name="">体育</td>
+  				</tr>
+  				<tr>
+  					<td style="vertical-align: top;">个人描述:</td>
+  					<td><input type="text" id="self"></td>
+  				</tr>
+  			</table>
+  			<input type="submit" value="确认提交" style="background: #2C8AD2;height: 40px;width: 100%;color: white;border-radius: 10px;">
+  		</div>
+	  	<div id="left">
+	  		<div class="news">
+	  			<h1>title</h1>
+	  			<h2>title2</h2>
+	  			<h3>time</h3>
+	  			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;内容内容内容内容内容内容内容内容内容内容<a href="#">内容内容内容内容内容</a>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容.</p>
+	  			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;内容内容内容内容内容内容内容内容内容内容<a href="#">内容内容内容内容内容</a>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容.</p>
+	  			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;内容内容内容内容内容内容内容内容内容内容<a href="#">内容内容内容内容内容</a>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容.</p>
+	  			<p><img src="../pic/360反馈意见截图16581118699399.png"></p>
+	  			<p>内容内容内容内容内容</a>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容.</p>
+	  		</div>
+	  		<div class="news">
+	  			<h1>title</h1>
+	  			<h2>title2</h2>
+	  			<h3>time</h3>
+	  			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;内容内容内容内容内容内容内容内容内容内容<a href="#">内容内容内容内容内容</a>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容.</p>
+	  			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;内容内容内容内容内容内容内容内容内容内容<a href="#">内容内容内容内容内容</a>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容.</p>
+	  			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;内容内容内容内容内容内容内容内容内容内容<a href="#">内容内容内容内容内容</a>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容.</p>
+	  			<p><img src="../pic/360反馈意见截图16581118699399.png"></p>
+	  			<p>内容内容内容内容内容</a>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容.</p>
+	  			<ul>
+	  				<li>项目1</li>
+	  				<li>项目2</li>
+	  				<li>项目3</li>
+	  			</ul>
+	  		</div>
+	  		<div class="news" style="overflow: hidden;">
+	  			<h1>picture</h1>
+	  			<div class="pic"  align="center"><p>好看的图片</p><img src="../pic/360反馈意见截图16581118699399.png" alt=""></div>
+	  			<div class="pic"  align="center"><p>好看的图片</p><img src="../pic/360反馈意见截图16581118699399.png" alt=""></div>
+	  			<div class="pic"  align="center"><p>好看的图片</p><img src="../pic/360反馈意见截图16581118699399.png" alt=""></div>
+	  			<div class="pic"  align="center"><p>好看的图片</p><img src="../pic/360反馈意见截图16581118699399.png" alt=""></div>
+	  			<div class="pic"  align="center"><p>好看的图片</p><img src="../pic/360反馈意见截图16581118699399.png" alt=""></div>
+	  			<div class="pic"  align="center"><p>好看的图片</p><img src="../pic/360反馈意见截图16581118699399.png" alt=""></div>
+	  			<div class="pic"  align="center"><p>好看的图片</p><img src="../pic/360反馈意见截图16581118699399.png" alt=""></div>
+	  			<div class="pic"  align="center"><p>好看的图片</p><img src="../pic/360反馈意见截图16581118699399.png" alt=""></div>
+	  		</div>
+	  		<div class="news">
+	  			<h1> last title</h1>
+	  			<h2>gggg</h2>
+	  			<h3>4444</h3>
+	  			<ul>
+	  				<li>1</li>
+	  				<li>2</li>
+	  				<li>3</li>
+	  			</ul>
+	  			<table id="table2" style="border-collapse:collapse;">
+	  				<tr>
+	  					<td style="background: #333333;color: white;">表头</td>
+	  					<td style="background: #333333;color: white;">表头</td>
+	  					<td style="background: #333333;color: white;">表头</td>
+	  				</tr>
+	  				<tr>
+	  					<td>内容</td>
+	  					<td>内容</td>
+	  					<td><a href="#">操作</a></td>
+	  				</tr>
+	  				<tr>
+	  					<td>内容</td>
+	  					<td>内容</td>
+	  					<td>操作</td>
+	  				</tr>
+	  				<tr>
+	  					<td>内容</td>
+	  					<td>内容</td>
+	  					<td>操作</td>
+	  				</tr>
+	  				<tr>
+	  					<td>内容</td>
+	  					<td>内容</td>
+	  					<td>操作</td>
+	  				</tr>
+	  				<tr>
+	  					<td style="background: #CCCCCC;color: black;">总计</td>
+	  					<td colspan="2" style="background: #CCCCCC;color: black;">1000</td>
+	  				</tr>
+	  			</table>
+	  		</div>
+	  	</div>
+  	</div>
+  	<div class="top" style="text-align: center;">@版权所有</div>
+  </div>
+</body>
+</html>
