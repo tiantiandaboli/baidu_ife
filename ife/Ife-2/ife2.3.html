@@ -1,0 +1,118 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>IFE JavaScript Task 01</title>
+  </head>
+<body>
+
+  <ul id="source">
+    <li>北京空气质量：<b>90</b></li>
+    <li>上海空气质量：<b>70</b></li>
+    <li>天津空气质量：<b>80</b></li>
+    <li>广州空气质量：<b>50</b></li>
+    <li>深圳空气质量：<b>40</b></li>
+    <li>福州空气质量：<b>32</b></li>
+    <li>成都空气质量：<b>90</b></li>
+  </ul>
+
+  <ul id="resort">
+    <!-- 
+    <li>第一名：北京空气质量：<b>90</b></li>
+    <li>第二名：北京空气质量：<b>90</b></li>
+    <li>第三名：北京空气质量：<b>90</b></li>
+     -->
+
+  </ul>
+
+  <button id="sort-btn">排序</button>
+
+<script type="text/javascript">
+
+  /*
+/**
+ * getData方法
+ * 读取id为source的列表，获取其中城市名字及城市对应的空气质量
+ * 返回一个数组，格式见函数中示例
+ */
+function getData() {
+  /*
+  coding here
+  */
+  var data = new Array();
+  var city = document.getElementById('source').getElementsByTagName('li');
+  var num = document.getElementById('source').getElementsByTagName('b');
+  for(i=0;i<city.length;i++){
+    data[i] = (city[i].innerHTML.slice(0,2) +','+ num[i].innerHTML).split(",");
+  }
+  /*
+  data = [
+    ["北京", 90],
+    ["北京", 90]
+    ……
+  ]
+  */
+
+  return data;
+
+}
+
+/**
+ * sortAqiData
+ * 按空气质量对data进行从小到大的排序
+ * 返回一个排序后的数组
+ */
+function sortAqiData(data) {
+  for(k=0;k<data.length;k++){
+    for(var j = k + 1;j<data.length;j++){
+      if(data[k][1]>data[j][1]){
+        var tmp = data[k];
+        data[k] = data[j];
+        data[j] = tmp;
+      }
+    }
+  }
+  return data;
+}
+
+/**
+ * render
+ * 将排好序的城市及空气质量指数，输出显示到id位resort的列表中
+ * 格式见ul中的注释的部分
+ */
+var n = 0;
+var tho = document.getElementById('resort');
+function render(data) {
+  for(i=0;i<data.length;i++){
+    var tt = document.createElement("li");
+        tec = "第" + n + "名：" + data[i][0] + "空气质量：";
+    tt.innerHTML = tec;
+    var dd = document.createElement("b");
+    dd.innerHTML = data[i][1];
+    tt.appendChild(dd);
+    tho.appendChild(tt);
+    n++;
+  }
+}
+
+function btnHandle() {
+  var aqiData = getData();
+  aqiData = sortAqiData(aqiData);
+  render(aqiData);
+}
+
+function init() {
+
+  // 在这下面给sort-btn绑定一个点击事件，点击时触发btnHandle函数
+  var gho = document.getElementById('sort-btn');
+  gho.addEventListener("click",function(){
+    btnHandle();
+    n = 0;
+  },true)
+}
+
+init();
+
+</script>
+</body>
+</html>
