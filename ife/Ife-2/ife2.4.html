@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ife2.4</title>
+	<style type="text/css">
+		#num ul li{
+			list-style-type: none;	
+			float: left;
+			width: 30px;
+			height: 30px;
+			margin: 10px;
+			background: red;
+			line-height: 30px;
+			color: white;
+			text-align: center;
+		}
+	</style>
+
+</head>
+<body>
+	<div>
+		<input type="text" onkeyup="if(isNaN(value))execCommand('undo')" onafterpaste="if(isNaN(value))execCommand('undo')">
+		<input type="button" value="左侧入">
+		<input type="button" value="右侧入">
+		<input type="button" value="左侧出">
+		<input type="button" value="右侧出">
+	</div>
+	<div id="num">
+		<ul>
+			<li>44</li>
+			<li>55</li>
+			<li>66</li>
+			<li>77</li>
+		</ul>
+	</div>
+</body>
+	<script type="text/javascript">
+	(function() {
+		var but = document.getElementsByTagName('input');
+		    number = document.getElementsByTagName('ul')[0];
+    num_del();
+		but[1].addEventListener("click",function(){
+	  var new_num = document.createElement("li");
+	  new_num.innerHTML = but[0].value;
+	  number.insertBefore(new_num,number.childNodes[0]);
+  	},true);
+
+		but[2].addEventListener("click",function(){
+	  var new_num = document.createElement("li");
+	  new_num.innerHTML = but[0].value;
+	  number.appendChild(new_num);
+  	},true);
+
+		but[3].addEventListener("click",function(){
+    var left_out = document.getElementsByTagName('li')[0];
+    number.removeChild(left_out);
+  	},true);  	
+
+		but[4].addEventListener("click",function(){
+		var line = document.getElementsByTagName('li').length;
+    var left_out = document.getElementsByTagName('li')[line-1];
+    number.removeChild(left_out);
+  	},true);  	
+
+
+    })();
+  function num_del(){
+  	var num_ul = document.getElementsByTagName('ul')[0];
+  	num_ul.onclick = function(ev){
+  		var ev = event|| window.event;
+  		var target = ev.target || ev.srcElement;
+  		if(target.nodeName.toLowerCase() == 'li'){
+        num_ul.removeChild(target);
+      }
+  	}
+  }
+	</script>
+</html>
