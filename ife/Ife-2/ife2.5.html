@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ife2.5</title>
+	<style type="text/css">
+		#num ul li{
+			list-style-type: none;	
+			float: left;
+			width: 30px;
+			height: 30px;
+			margin: 0 10px 0 10px;
+			background: red;
+			line-height: 30px;
+			color: white;
+			text-align: center;
+		}
+	</style>
+
+</head>
+<body>
+	<div>
+		<input type="number" min="10" max="100">
+		<input type="button" value="左侧入">
+		<input type="button" value="右侧入">
+		<input type="button" value="左侧出">
+		<input type="button" value="右侧出">
+		<input type="button" value="sort" onclick="num_lis()">
+	</div>
+	<div id="num" style="height: 150px; position: relative;">
+		<ul>
+			<li style="margin-top: 106px;">44</li>
+			<li style="margin-top: 96px;"">55</li>
+			<li>66</li>
+			<li>77</li>
+		</ul>
+	</div>
+</body>
+	<script type="text/javascript">
+	(function() {
+		var but = document.getElementsByTagName('input');
+		    number = document.getElementsByTagName('ul')[0];
+		    num_max = document.getElementsByTagName('li');
+
+    num_del();
+
+    num_color();
+
+		but[1].addEventListener("click",function(){
+	  var new_num = document.createElement("li");
+	  new_num.innerHTML = but[0].value;
+
+	  if (num_max.length>59) {alert("TOO MUCH!")}
+    if (but[0].value>=10&&but[0].value<=100) {
+	    number.insertBefore(new_num,number.childNodes[0]);
+	    num_color();
+	  }
+  	},true);
+
+		but[2].addEventListener("click",function(){
+	  var new_num = document.createElement("li");
+	  new_num.innerHTML = but[0].value;
+
+	  if (num_max.length>59) {alert("TOO MUCH!")}
+	  if (but[0].value>=10&&but[0].value<=100) {
+	  	number.appendChild(new_num);
+	  	num_color();
+	  }
+  	},true);
+
+		but[3].addEventListener("click",function(){
+    var left_out = document.getElementsByTagName('li')[0];
+    number.removeChild(left_out);
+  	},true);
+
+		but[4].addEventListener("click",function(){
+		var line = document.getElementsByTagName('li').length;
+    var left_out = document.getElementsByTagName('li')[line-1];
+    number.removeChild(left_out);
+  	},true);
+
+    })();
+
+  function num_del(){
+  	var num_ul = document.getElementsByTagName('ul')[0];
+  	num_ul.onclick = function(ev){
+  		var ev = event|| window.event;
+  		var target = ev.target || ev.srcElement;
+  		if(target.nodeName.toLowerCase() == 'li'){
+        num_ul.removeChild(target);
+      }
+  	}
+  }
+
+  function num_color(){
+  	num_max = document.getElementsByTagName('li');
+  	for(i=0;i<num_max.length;i++){
+  		num_max[i].style.height = num_max[i].innerHTML + "px";
+  		num_max[i].style.marginTop = 150 - num_max[i].innerHTML + "px";
+  	}
+  }
+
+  function sortNumber(a, b)
+		{
+		return a - b
+		}
+	function num_lis(){
+		var num1 = document.getElementsByTagName('li');
+		var arr1 = new Array;
+		for(i=0;i<num1.length;i++){
+			arr1[i] = (num1[i].innerHTML)*1;
+		}
+		arr1 = arr1.sort(sortNumber)
+	  for(j=0;j<num1.length;j++){
+	  	num1[j].innerHTML = arr1[j];
+	  }
+	  num_color();
+	}
+	</script>
+</html>
