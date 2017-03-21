@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ife2.7</title>
+</head>
+<style type="text/css">
+	div{
+		margin: 10px;
+		padding: 0;
+		border: 1px solid blue;
+		float: left;
+	}
+</style>
+<body>
+	<div id="boot">
+		<div style="">
+			<div>
+				<div style="height: 30px; width: 40px;" id="leaf"></div>
+				<div style="height: 30px; width: 40px;"></div>
+			</div>
+			<div>
+				<div style="height: 30px; width: 40px;"></div>
+				<div style="height: 30px; width: 40px;"></div>
+			</div>
+		</div>
+		<div>
+			<div>
+				<div style="height: 30px; width: 40px;"></div>
+				<div style="height: 30px; width: 40px;"></div>
+			</div>
+			<div>
+				<div style="height: 30px; width: 40px;"></div>
+				<div style="height: 30px; width: 40px;"></div>
+			</div>
+		</div>
+	</div>
+	<div>
+		<input type="button" value="inOrder" onclick="inOrder(boot)">
+		<input type="button" value="reOrder">
+		<input type="button" value="postOrder">
+	</div>
+</body>
+<script type="text/javascript">
+  var boot = document.getElementById('boot');
+      leaf = document.getElementById('leaf');
+
+	function inOrder(boot) {
+    if(!(boot == null)) {
+      setInterval(inOrder(boot.firstElementChild),5000);
+      //inOrder(boot.firstElementChild);
+      /*setInterval(function(){
+	      boot.style.borderColor = "red";
+      },1000);*/
+
+      boot.style.borderColor = "red";
+      setInterval(inOrder(boot.lastElementChild),1000);	
+      //inOrder(boot.lastElementChild);
+    }
+  }
+
+</script>
+</html>
